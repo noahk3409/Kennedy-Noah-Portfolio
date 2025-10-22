@@ -63,7 +63,8 @@ Responsive Design, Accessibility, UX Prototyping
 ## 📦 Installation
 To run the portfolio locally:
 
-1. Clone this repository  
-   ```bash
-   git clone https://github.com/yourusername/portfolio.git
+Clone this repository
+Navigate into the project directory:
+Open the index.html file in your browser, or if using a local server, start the server and navigate to localhost to view.
+  
 
