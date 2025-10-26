@@ -10,6 +10,14 @@
 <body>
   <header>
     <div class="logo">Noah Kennedy</div>
+
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    
     <nav>
       <ul>
         <li><a href="index.html">About</a></li>
@@ -19,29 +27,38 @@
     </nav>
   </header>
 
-  <main class="contact">
-    <h2>Contact</h2>
-    <p>For any inquiries, fill out the contact form below.</p>
+  <main class="contact-page">
+    <section class="contact-intro">
+      <h1>Let’s Connect</h1>
+      <p>
+        I’m always open to collaborating on exciting projects or discussing new opportunities.
+        Whether you have a question, want to work together, or just want to say hi — reach out below.
+      </p>
+    </section>
 
-    <form action="#" method="post" class="contact-form">
-      <label for="name">Name</label>
-      <input type="text" id="name" name="name" required>
+    <section class="contact-form-section">
+      <form action="#" method="post" class="contact-form">
+        <label for="name">First Name</label>
+        <input type="text" id="name" name="name" required>
 
-      <label for="surname">Surname</label>
-      <input type="text" id="surname" name="surname" required>
+        <label for="surname">Last Name</label>
+        <input type="text" id="surname" name="surname" required>
 
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" required>
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
 
-      <label for="message">Message</label>
-      <textarea id="message" name="message" rows="5" required></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" required></textarea>
 
-      <button type="submit">Submit</button>
-    </form>
+        <button type="submit">Submit</button>
+      </form>
+    </section>
   </main>
 
   <footer>
     <p>© 2025 Noah Kennedy</p>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>

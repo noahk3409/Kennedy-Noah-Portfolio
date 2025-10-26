@@ -4,12 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Noah Kennedy - Projects</title>
-  <link rel="stylesheet" href="css/main.css"/>
-  <link rel="stylesheet" href="css/grid.css"/>
+  <link rel="stylesheet" href="css/main.css" />
+  <link rel="stylesheet" href="css/grid.css" />
 </head>
 <body>
   <header>
     <div class="logo">Noah Kennedy</div>
+
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
     <nav>
       <ul>
         <li><a href="index.html">About</a></li>
@@ -19,9 +27,14 @@
     </nav>
   </header>
 
-  <main class="projects">
-    <h2>My Projects</h2>
-    <p>Below you can find an overview of my work. To see more, click on a project image.</p>
+  <main class="projects-page">
+    <section class="projects-intro">
+      <h1>My Projects</h1>
+      <p>
+        Explore a curated selection of my creative and development work.  
+        Each project showcases a mix of design thinking, front-end development, and UX strategy.
+      </p>
+    </section>
 
     <section class="project-grid">
       <div class="project-card"><img src="images/project1.png" alt="Project 1"></div>
@@ -36,5 +49,7 @@
   <footer>
     <p>© 2025 Noah Kennedy</p>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
