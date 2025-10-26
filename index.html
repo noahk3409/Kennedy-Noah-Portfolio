@@ -10,7 +10,15 @@
 <body>
   <header>
     <div class="logo">Noah Kennedy</div>
-    <nav>
+    
+    <!-- Hamburger Menu -->
+    <div class="menu-toggle" id="menu-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <nav id="nav-menu">
       <ul>
         <li><a href="index.html" class="active">About</a></li>
         <li><a href="projects.html">Projects</a></li>
@@ -20,26 +28,32 @@
   </header>
 
   <main class="home">
-    <section class="intro">
+    <section class="intro fade-in">
       <h1>Hi, I’m Noah.</h1>
       <p>
         I am a creative front-end web developer and UX designer passionate about creating alluring yet functional projects for both web and print.
-      </p>
-      <p>
         I specialize in user-focused experiences that balance beautiful interfaces with reliable and consistent function.
-      </p>
-      <p>
         Whether it’s creating responsive websites, collaborating on branding, or designing for print, I am passionate about the work I exhibit for my clients.
       </p>
     </section>
 
-    <div class="profile-image">
-      <img src="images/profile-placeholder.png" alt="Profile Illustration" />
+    <div class="profile-image fade-in">
+      <img src="images/profile-placeholder.png" alt="Profile Picture" />
     </div>
+
+    <!-- Video Player -->
+    <section class="video-section fade-in">
+      <video controls poster="images/preview.jpg" width="100">
+        <source src="video/portfolio-intro.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </section>
   </main>
 
   <footer>
     <p>© 2025 Noah Kennedy</p>
   </footer>
+
+  <script src="js/main.js"></script>
 </body>
 </html>
