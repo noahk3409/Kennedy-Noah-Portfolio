@@ -10,6 +10,7 @@ body {
   background-color: #ffffff;
   color: #111;
   line-height: 1.6;
+  font-size: 16px;
 }
 
 /* ---------- HEADER ---------- */
@@ -17,15 +18,15 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 2rem;
-  background: #e5e5e5;
-  border-bottom: 4px solid #1a1a1a;
+  padding: 2rem 2rem;
+  background: #ffffff;
+  border-bottom: 1px solid #1a1a1a;
   position: relative;
 }
 
 .logo {
-  font-weight: bold;
-  font-size: 1.2rem;
+  width: 200px;
+  height: auto;
 }
 
 nav ul {
@@ -41,7 +42,7 @@ nav a {
 }
 
 nav a.active {
-  border-bottom: 2px solid #111;
+  border-bottom: 1px solid #111;
 }
 
 /* ---------- MOBILE MENU ---------- */
@@ -127,8 +128,8 @@ nav a.active {
 }
 
 .profile-image img {
-  width: 250px;
-  height: 250px;
+  width: 350px;
+  height: 350px;
   border-radius: 50%;
   background-color: #d9d9d9;
   object-fit: cover;
