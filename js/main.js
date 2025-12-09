@@ -10,24 +10,25 @@ if (menuToggle && navMenu) {
 }
 
 // ----- Scroll Fade-In Effect -----
-const faders = document.querySelectorAll(".fade-in");
+gsap.registerPlugin(ScrollTrigger);
 
-const appearOptions = {
-  threshold: 0.3,
-  rootMargin: "0px 0px -50px 0px"
-};
+const fadeItems = document.querySelectorAll(".fade-in");
 
-const appearOnScroll = new IntersectionObserver((entries, observer) => {
-  entries.forEach(entry => {
-    if (!entry.isIntersecting) return;
-    entry.target.classList.add("visible");
-    observer.unobserve(entry.target);
+function fadeInOnScroll(item) {
+  gsap.to(item, {
+    opacity: 1,
+    y: 30,
+    duration: 1,
+    ease: "power2.out",
+    scrollTrigger: {
+      trigger: item,
+      start: "top 80%",
+      once: true 
+    }
   });
-}, appearOptions);
+}
 
-faders.forEach(fader => {
-  appearOnScroll.observe(fader);
-});
+fadeItems.forEach(fadeInOnScroll);
 
 // ----- Video Controls ----- //
 
