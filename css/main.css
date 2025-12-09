@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-family: "Helvetica Neue", Helvetica, sans-serif;
   background-color: #ffffff;
   color: #111;
   line-height: 1.6;
@@ -19,8 +19,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 2rem 2rem;
-  background: #ffffff;
-  border-bottom: 1px solid #1a1a1a;
+  background: #248A3B;
   position: relative;
 }
 
@@ -37,12 +36,12 @@ nav ul {
 
 nav a {
   text-decoration: none;
-  color: #111;
+  color: white;
   font-weight: 500;
 }
 
 nav a.active {
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid white;
 }
 
 /* ---------- MOBILE MENU ---------- */
@@ -59,7 +58,8 @@ nav a.active {
   display: block;
   height: 3px;
   width: 100%;
-  background-color: #111;
+  background-color: #ffffff;
+  color: black;
   border-radius: 3px;
   transition: all 0.3s ease;
 }
@@ -80,11 +80,11 @@ nav a.active {
 @media (max-width: 768px) {
   nav {
     position: absolute;
-    top: 60px;
+    top: 100%;
     left: 0;
     width: 100%;
-    background: #fff;
-    transform: translateY(-120%);
+    background: #248A3B;
+    transform: translateY(-150%);
     transition: transform 0.3s ease;
     text-align: center;
     border-bottom: 3px solid #1a1a1a;
@@ -136,21 +136,132 @@ nav a.active {
 }
 
 /* ---------- VIDEO SECTION ---------- */
-.video-section {
-  grid-column: 1 / -1;
-  margin-top: 3rem;
-  display: flex;
-  justify-content: center;
+.video-wrapper {
+  position: relative;
+  max-width: 800px;
+  width: 100%;
+  margin: 3rem auto;
 }
 
-video {
+/* Video display */
+.video-wrapper video {
   width: 100%;
-  max-width: 800px; /* Prevents it from stretching too wide */
-  aspect-ratio: 16 / 9; /* Keeps proportions consistent */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+  border-radius: 15px;
+  display: block;
+  aspect-ratio: 16 / 9;
   object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.25);
+  z-index: 1;
 }
+
+/* Controls overlay */
+#video-controls {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+
+  width: 100%;
+  padding: 0.75rem 1rem;
+
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  background: rgba(0,0,0,0.6);
+  backdrop-filter: blur(4px);
+
+  border-radius: 0 0 8px 8px;
+
+  opacity: 0;
+  transition: opacity 0.25s ease;
+  z-index: 2;
+}
+
+.video-wrapper:hover #video-controls {
+  opacity: 1;
+}
+
+#video-controls button {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.4rem;
+  cursor: pointer;
+}
+
+#video-controls button:hover {
+  color: #00aaff;
+}
+
+#change-vol {
+  width: 120px;
+  cursor: pointer;
+}
+
+#video-controls i {
+  color: #fff;
+}
+
+/*********** Baseline, reset styles ***********/
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+  width: 25rem;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+
+/******** Chrome, Safari, Opera and Edge Chromium styles ********/
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #248A3B;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -4px; /* Centers thumb on the track */
+  background-color: #31b650;
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-webkit-slider-thumb {
+  outline: 3px solid #36d25b;
+  outline-offset: 0.125rem;
+}
+
+/*********** Firefox styles ***********/
+/* slider track */
+input[type="range"]::-moz-range-track {
+  background-color: #248A3B;
+  border-radius: 0.5rem;
+  height: 0.5rem;
+}
+
+/* slider thumb */
+input[type="range"]::-moz-range-thumb {
+  background-color: #31b650;
+  border: none; /*Removes extra border that FF applies*/
+  border-radius: 0.5rem;
+  height: 1rem;
+  width: 1rem;
+}
+
+input[type="range"]:focus::-moz-range-thumb{
+  outline: 3px solid #36d25b;
+  outline-offset: 0.125rem;
+}
+
 
 /* ---------- PROJECTS PAGE ---------- */
 .projects-page {
@@ -227,25 +338,25 @@ video {
 }
 
 .contact-form button {
-  background: #1a1a1a;
+  background: #1c1c1e;
   color: #fff;
   padding: 0.9rem;
   border: none;
   border-radius: 6px;
   cursor: pointer;
   font-weight: 600;
-  transition: background 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
 }
 
 .contact-form button:hover {
-  background: #333;
+  background: #248A3B;
 }
   
 /* ---------- FOOTER ---------- */
 footer {
   text-align: center;
   padding: 1rem;
-  background: #1a1a1a;
+  background: #1c1c1e;
   color: #fff;
   font-size: 0.9rem;
   margin-top: 2rem;
@@ -263,7 +374,7 @@ footer {
   transform: translateY(0);
 }
 
-/* ---------- RESPONSIVE ---------- */
+/* ---------- MEDIA QUERIES ---------- */
 @media (max-width: 768px) {
   .home {
     grid-template-columns: 1fr;
