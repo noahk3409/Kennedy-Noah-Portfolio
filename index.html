@@ -4,6 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Noah Kennedy - Portfolio</title>
+  <link rel="icon" type="image/favicon" href="/images/nk-logo.svg">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <link rel="stylesheet" href="css/main.css"/>
   <link rel="stylesheet" href="css/grid.css"/>
@@ -33,22 +34,23 @@
 
   <main class="home">
     <section class="intro fade-in">
-      <h1>Hi, I’m Noah.</h1>
-      <p>
-        I am a creative front-end web developer and UX designer passionate about creating alluring yet functional projects for both web and print.
-        I specialize in user-focused experiences that balance beautiful interfaces with reliable and consistent function.
-        Whether it’s creating responsive websites, collaborating on branding, or designing for print, I am passionate about the work I exhibit for my clients.
+      <h1>Noah Kennedy</h1>
+      <h3>Front-End Development // Graphic Design // UX Design // 3D Modelling</h3>
+      <p>I'm a multidisciplinary designer and developer focused on creating clean, thoughtful digital experiences. Whether I'm building responsive interfaces, crafting polished motion graphics, or bringing products to life in 3D, I aim to create work that feels intuitive, modern, and visually engaging.
+        Let’s build something exceptional together.
       </p>
+      <a class="btn-primary" href="contact.html">Let’s Connect</a>
     </section>
 
     <div class="profile-image fade-in">
       <img src="images/profile-photo.png" alt="Profile Picture"/>
     </div>
-
+  </main>
+  
     <!-- Video Player -->
-    <div class="grid-con">
-    <h2>Check out my Demo Reel!</h2>
-    <section id="player-container" class="col-span-full video-wrapper">
+    <div class="grid-con video-center">
+    <h2 class="fade-in video-title">Check out my Demo Reel!</h2>
+      <section id="player-container" class="col-span-full video-wrapper fade-in">
         <video preload="metadata" poster="images/thumbnail.png">
             <source src="video/demo-reel.mp4" type="video/mp4">
             <source src="video/demo-reel_1.webm" type="video/webm">
@@ -64,32 +66,39 @@
             <button id="full-screen"><i class="fa fa-arrows-alt"></i></button>
         </div>
 
-    </section>
-</div>
+      </section>
+    </div>
 
-  </main>
+  <footer>
+  <div class="footer-container">
 
-  <footer class="footer">
-  <div class="footer-inner">
+    <div class="footer-logo">
+      <img src="images/nk-logo.svg" alt="NK Logo">
+    </div>
 
     <div class="footer-col">
       <h3>Sitemap</h3>
-      <a href="#">Home</a>
-      <a href="#">Portfolio</a>
-      <a href="#">Projects</a>
-      <a href="#">Contact</a>
+      <nav id="footer-nav-menu">
+      <ul>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html"> Contact</a></li>
+      </ul>
+    </nav>
     </div>
 
     <div class="footer-col">
       <h3>Email</h3>
-      <a class="footer-email" href="mailto:noahalexander9718@gmail.com">
-        noahalexander9718@gmail.com
-      </a>
+      <a href="mailto:noahalexander9718@gmail.com">noahalexander9718@gmail.com</a>
+      <p>© 2025 Noah Kennedy</p>
     </div>
-  </div>
-    <p>© 2025 Noah Kennedy</p>
-  </footer>
 
+  </div>
+</footer>
+  
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script src="js/main.js"></script>
 </body>
 </html>
