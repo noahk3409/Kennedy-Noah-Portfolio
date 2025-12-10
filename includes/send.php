@@ -31,7 +31,7 @@ if($_SERVER['REQUEST_METHOD'] === 'POST') {
     mail($recipient, $subject, $emailBody);
 
     // Thank you Message//
-    $msg = "Thank you for your message.";
+    $msg = "Thank you for your message! I'll be in touch soon.";
     header("Location: ../contact.php?msg=" . urlencode($msg));
     exit();
 
