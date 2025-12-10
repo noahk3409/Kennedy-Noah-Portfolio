@@ -47,8 +47,7 @@
 
       echo "<p class='$class'>$safeMsg</p>";
   }
-?>
-
+    ?>
 
     <form method="post" action="includes/send.php">
 

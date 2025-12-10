@@ -8,47 +8,137 @@
   <link rel="stylesheet" href="css/main.css" />
   <link rel="stylesheet" href="css/grid.css" />
 </head>
+
 <body>
-  <header>
-    <div class="logo">
-      <img src="images/wordmark.svg" alt="logo"/>
+
+<header>
+  <div class="logo">
+    <img src="images/wordmark.svg" alt="logo"/>
+  </div>
+
+  <div class="menu-toggle">
+    <span></span><span></span><span></span>
+  </div>
+
+  <nav id="nav-menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="projects.html" class="active">Projects</a></li>
+      <li><a href="contact.php">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<main class="projects-page">
+
+  <section class="projects-intro">
+    <h1>My Projects</h1>
+    <p>Explore a curated selection of some of my development and design work.</p>
+  </section>
+
+  <!-- PROJECT 1 -->
+  <div class="project-card">
+    <h2>Swerve Drink Rebrand</h2>
+
+    <div class="carousel" id="carousel">
+      <div class="carousel-track" id="carouseltrack">
+        <video src="video/swerve-bottle.mp4" controls></video>
+        <img src="images/swerve-bottles.jpg" alt="Project 1 Image 1">
+        <img src="images/swerve-bottle2.jpg" alt="Project 1 Image 2">
+      </div>
+
+      <button class="carousel-btn prev-btn">&lt;</button>
+      <button class="carousel-btn next-btn">&gt;</button>
     </div>
-
-    <!-- Hamburger Menu -->
-    <div class="menu-toggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="contact.php">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-
-  <main class="projects-page">
-    <section class="projects-intro">
-      <h1>My Projects</h1>
+    <div class="project-info">
+      <h3>Overview</h3>
       <p>
-        Explore a curated selection of my creative and development work.  
-        Each project showcases a mix of design thinking, front-end development, and UX strategy.
+      A full rebrand of Swerve, a fictional milk drink line. I created new packaging, 3D bottle renders, and promotional materials to give the brand a bold, modern, and playful identity while appealing to a younger audience.
       </p>
-    </section>
 
-    <section class="project-grid">
-      <div class="project-card"><img src="images/project1.png" alt="Project 1"></div>
-      <div class="project-card"><img src="images/project2.png" alt="Project 2"></div>
-      <div class="project-card"><img src="images/project3.png" alt="Project 3"></div>
-      <div class="project-card"><img src="images/project4.png" alt="Project 4"></div>
-    </section>
-  </main>
+      <h3>Programs Used</h3>
+      <p>
+      Cinema 4D / Redshift<br>
+      Adobe Illustrator<br>
+      Adobe Photoshop<br>
+      Adobe After Effects<br>
+      Javascript<br>
+      HTML / CSS
+      </p>
 
-  <footer>
+      <h3>Problem Solving</h3>
+      <p>
+      A major challenge was achieving consistent, polished lighting across every 3D render. Early results looked flat and dark and didn’t match the brand tone. I improved this by rebuilding the lighting setup, creating custom material textures, and changing render settings to fit my scene.
+      </p>
+    </div>
+  </div>
+
+  <!-- PROJECT 2 -->
+  <div class="project-card">
+    <h2>Earbuds Promotional Site</h2>
+
+    <div class="carousel">
+      <div class="carousel-track">
+        <video src="video/earbud_animation.mp4" controls></video>
+        <img src="images/earbuds-cinema.jpg" alt="Project 2 Image 1">
+        <img src="images/earbuds-site.jpg" alt="Project 2 Image 2">
+      </div>
+
+      <button class="carousel-btn prev-btn">&lt;</button>
+      <button class="carousel-btn next-btn">&gt;</button>
+    </div>
+     <div class="project-info">
+    <h3>Overview</h3>
+    <p>A promotional 3D product website built for a fictional pair of 'Ion Earbuds' designed, modelled, and animated by me.</p>
+
+    <h3>Programs Used</h3>
+    <p>
+      Cinema 4D<br>
+      Adobe Illustrator<br>
+      Adobe Photoshop<br>
+      JavaScript<br>
+      HTML / CSS
+    </p>
+
+    <h3>Problem Solving</h3>
+    <p>A major challenge was optimizing the 3D model viewer for web, as well as placing hotspots at the right coordinates, I fixed this by centering my model to 0 on the plane before exporting and was able to define coordinates exactly this way. </p>
+  </div>
+  </div>
+
+  <!-- PROJECT 3 -->
+  <div class="project-card">
+    <h2>Ceci Makeup Brand</h2>
+
+    <div class="carousel">
+      <div class="carousel-track">
+        <img src="images/ceci.jpg" alt="Project 3 Image 1">
+        <img src="images/ceci-post.jpg" alt="Project 3 Image 2">
+      </div>
+
+      <button class="carousel-btn prev-btn">&lt;</button>
+      <button class="carousel-btn next-btn">&gt;</button>
+    </div>
+    <div class="project-info">
+    <h3>Overview</h3>
+    <p>A full brand identity for Ceci, a minimalist makeup company designed by me.</p>
+
+    <h3>Programs Used</h3>
+    <p>
+      Adobe Illustrator<br>
+      Adobe Photoshop<br>
+      Adobe InDesign<br>
+      After Effects
+    </p>
+
+    <h3>Problem Solving</h3>
+    <p>The biggest challenge was maintaining consistent textures across label mockups and sizes, I fixed this by creating custom label sizes for each bottle and container size.</p>
+  </div>
+  </div>
+
+</main>
+
+<footer>
   <div class="footer-container">
 
     <div class="footer-logo">
@@ -62,7 +152,7 @@
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="projects.html" class="active">Projects</a></li>
-        <li><a href="includes/contact.php"> Contact</a></li>
+        <li><a href="contact.php">Contact</a></li>
       </ul>
     </nav>
     </div>
@@ -70,15 +160,18 @@
     <div class="footer-col">
       <h3>Email</h3>
       <a href="mailto:noahalexander9718@gmail.com">noahalexander9718@gmail.com</a>
+      <h3>Socials</h3>
+      <a href="https://github.com/noahk3409">GitHub</a>
       <p>© 2025 Noah Kennedy</p>
     </div>
 
   </div>
 </footer>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<script src="js/carousel.js"></script>
+<script src="js/main.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-  <script src="js/main.js"></script>
 </body>
 </html>

@@ -13,11 +13,10 @@ body {
   font-size: 16px;
 }
 
-h1
-h2
-h3{
+h1, h2, h3 {
   font-family: "Segoe UI", "Helvetica Neue", Helvetica, sans-serif;
 }
+
 
 .grid-con {
   padding: 100px;
@@ -148,7 +147,6 @@ header nav a.active {
 .profile-image {
   display: flex;
   justify-content: center;
-  margin-right: -500;
 }
 
 .profile-image img {
@@ -388,26 +386,70 @@ input[type="range"]:focus::-moz-range-thumb{
   gap: 1.5rem;
   width: 100%;
   max-width: 1100px;
+  margin: 4rem;
 }
+
+/* Project Cards */
 
 .project-card {
   background: #f2f2f2;
-  border-radius: 10px;
-  padding: 1rem;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 0 auto 3rem auto;
+  max-width: 750px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
 }
 
-.project-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+.project-card h2 {
+  margin-bottom: 1rem;
 }
 
-.project-card img {
+.project-info {
+  max-width: 700px; 
+  margin: 1.5rem auto 0 auto;
+}
+
+/* Carousel */
+
+.carousel {
+  position: relative;
   width: 100%;
-  height: auto;
-  border-radius: 8px;
-  display: block;
+  max-width: 700px;
+  overflow: hidden;
+  margin: 0 auto;
+  border-radius: 14px;
 }
+
+.carousel-track {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+
+.carousel-track img,
+.carousel-track video {
+  min-width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 14px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #248a3cc4 ;
+  color: white;
+  border: none;
+  font-size: 2rem;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.prev-btn { left: 12px; }
+.next-btn { right: 12px; }
+
 
 /* ---------------- CONTACT PAGE ---------------- */
 
@@ -581,12 +623,6 @@ footer {
     margin-bottom: 20px;
   }
 
-  .footer-container {
-    flex-direction: column;
-    gap: 20px;
-    padding: 0 1.5rem;
-  }
-
   .footer-col {
     width: 100%;
   }
@@ -602,13 +638,173 @@ footer {
 
 
 /* ---------- MEDIA QUERIES ---------- */
+
+
+/* TABLET (max 1024px) */
+@media (max-width: 1024px) {
+
+  header {
+    padding: 1.5rem;
+  }
+
+  nav ul {
+    gap: 1rem;
+  }
+
+  .home {
+    grid-template-columns: 1fr 1fr;
+    padding: 2rem 5%;
+  }
+
+  .profile-image img {
+    width: 300px;
+    height: 300px;
+  }
+
+  .project-card {
+    max-width: 90%;
+  }
+
+  .carousel {
+    max-width: 100%;
+  }
+}
+
+/* MOBILE (max 768px) */
 @media (max-width: 768px) {
+
+  header {
+    padding: 1.2rem;
+  }
+
+  /* Enable mobile menu */
+  .menu-toggle {
+    display: flex;
+  }
+
+  nav ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
   .home {
     grid-template-columns: 1fr;
-    text-align: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .profile-image img {
+    width: 250px;
+    height: 250px;
   }
 
   .profile-image {
-    margin-top: 2rem;
+    margin-top: 4rem;
+  }
+
+  .intro {
+    text-align: center;
+  }
+
+  /* About Page */
+
+  /* About Tablet */
+@media (max-width: 1024px) {
+  .about-me {
+    margin-left: 1rem;
+    max-width: 100%;
+  }
+
+  .about-profile-image img {
+    width: 350px;
+    height: 350px;
+  }
+
+  .skills-icons {
+    flex-wrap: wrap;
+  }
+}
+
+/* About Mobile */
+@media (max-width: 768px) {
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem 1.5rem;
+  }
+
+  .about-profile-image img {
+    width: 260px;
+    height: 260px;
+    margin-bottom: 1.5rem;
+    align-items: center;
+  }
+
+  .about-me {
+    margin-left: 0;
+    max-width: 100%;
+    text-align: left;  
+  }
+
+  .skills-icons {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 0.8rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .about-profile-image {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-profile-image img {
+    margin-bottom: 4rem;
+    display: block;
+  }
+}
+
+  /* Projects page */
+  .project-card {
+    width: 100%;
+    padding: 1.2rem;
+  }
+
+  .carousel-btn {
+    width: 38px;
+    height: 38px;
+    font-size: 1.5rem;
+  }
+
+  /* Footer */
+  .footer-container {
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1.5rem;
+  }
+
+  .footer-logo img {
+    width: 140px;
+  }
+}
+
+/* SMALL MOBILE (max 480px) */
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn-primary {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .carousel-btn {
+    width: 32px;
+    height: 32px;
+    font-size: 1.2rem;
   }
 }
