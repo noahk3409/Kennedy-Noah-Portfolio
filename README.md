@@ -1,4 +1,4 @@
-# The Portfolio of Noah Kennedy — Creative Designer & Front-End Developer 🎨🚀
+# The Portfolio of Noah Kennedy — Creative Designer & Front-End Developer 🎨
 
 Welcome to my personal portfolio repository!  
 This project showcases my journey as a creative front-end developer and designer — combining visuals, code, and interaction to build experiences that feel intuitive and engaging.  
@@ -25,7 +25,7 @@ I strive to create work that not only looks good but **feels right** to interact
 
 ---
 
-## 🥷 Skills
+## 🚀 Skills
 
 **Core Focus Areas:**
 - Front-End Web Development  
